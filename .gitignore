@@ -1,0 +1,18 @@
+# Python virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Runtime state (created under FIRE_ON_LOG_HOME at runtime)
+cache/
+dance.log
+frame_idx
+nudge
+STOP
+
+# Source animation is user-supplied and may be copyrighted -- never commit it
+*.gif
+fire.gif
+
+# macOS
+.DS_Store
