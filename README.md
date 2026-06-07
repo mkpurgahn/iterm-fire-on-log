@@ -88,6 +88,29 @@ Or drive the animator directly:
 touch ~/.fire-on-log/STOP
 ```
 
+## Start automatically on iTerm2 launch
+
+iTerm2 runs any script in its **AutoLaunch** folder at startup. An installer is
+included that drops a tiny compiled AppleScript there which calls `autostart.sh`
+(an idempotent launcher — if a supervisor is already running it does nothing, so
+you never get two animators):
+
+```bash
+./install-autolaunch.sh
+```
+
+That's it — the fire comes up every time you open iTerm2. To start it right away
+without restarting iTerm2, run `./autostart.sh`.
+
+To remove it:
+
+```bash
+rm "$HOME/Library/Application Support/iTerm2/Scripts/AutoLaunch/fire_on_log.scpt"
+```
+
+> Requires iTerm2's Python API to be enabled (Settings → General → Magic →
+> Enable Python API), which you already need for the animation itself.
+
 ### Reposition the flame live (no restart)
 
 The running animation re-reads a nudge offset each loop:
